@@ -1,12 +1,12 @@
 import React from 'react'
 import Weatherapp from './Weatherapp'
-import HourlyForecast from './HourlyForecast'
+import FiveDayForecast from './FiveDayForecast'
 
 const App = () => {
   return (
     <div>
       <Weatherapp />
-      <HourlyForecast />  
+      <FiveDayForecast />  
     </div>
   )
 }

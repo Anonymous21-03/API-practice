@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const HourlyForecast = () => {
+const FiveDayForecast = () => {
   const [data, setData] = useState(null)
   const [city, setCity] = useState('Delhi')
   const [loading, setLoading] = useState(true)
@@ -66,4 +66,4 @@ const HourlyForecast = () => {
   )
 }
 
-export default HourlyForecast
+export default FiveDayForecast
