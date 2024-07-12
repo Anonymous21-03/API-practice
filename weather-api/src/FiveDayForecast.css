@@ -1,0 +1,94 @@
+.fiveday-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading h1 {
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  select {
+    width: 200px;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background-color: white;
+  }
+  
+  .details-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .details-container h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #444;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    ul{
+        display: flex;
+    }
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 1%;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card li {
+    list-style: none;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .card li span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    select {
+      width: 80%;
+      max-width: 300px;
+    }
+  }

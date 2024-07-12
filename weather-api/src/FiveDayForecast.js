@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './FiveDayForecast.css'
 
 const FiveDayForecast = () => {
   const [data, setData] = useState(null)
@@ -27,10 +28,10 @@ const FiveDayForecast = () => {
         setLoading(false)
       }
     }
-    fetchData();
+    fetchData()
   }, [city])
 
-  const handleCityChange = (event) => {
+  const handleCityChange = event => {
     setCity(event.target.value)
   }
 
@@ -39,27 +40,35 @@ const FiveDayForecast = () => {
   if (!data) return null
 
   return (
-    <div>
-      <h1>5 Day Forecast</h1>
+    <div className='fiveday-container'>
+      <div className='heading'><h1>5 Day Forecast</h1></div>
       <select value={city} onChange={handleCityChange}>
-        {cities.map((city) => (
+        {cities.map(city => (
           <option key={city} value={city}>
             {city}
           </option>
         ))}
       </select>
       {data && (
-        <div>
-          <h2>{data.city.name}, {data.city.country}</h2>
-          <ul>
-            {data.list.slice(0, 5).map((forecast, index) => (
-              <li key={index}>
-                Date: {new Date(forecast.dt * 1000).toLocaleDateString()}, 
-                Temp: {forecast.main.temp}°C, 
-                Weather: {forecast.weather[0].description}
-              </li>
-            ))}
-          </ul>
+        <div className='details-container'>
+          <h2>
+            {data.city.name}, {data.city.country}
+          </h2>
+          <div className='card-container'>
+            <ul>
+              {data.list.slice(0, 5).map((forecast, index) => (
+                <div className='card' key={index}>
+                  <li>
+                    <span>Date:</span> {new Date(forecast.dt * 1000).toLocaleDateString()}
+                    <br />
+                    <span>Temp:</span> {forecast.main.temp}°C
+                    <br />
+                    <span>Weather:</span> {forecast.weather[0].description}
+                  </li>
+                </div>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>
