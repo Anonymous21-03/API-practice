@@ -1,0 +1,41 @@
+.navbar-container {
+    display: flex;
+    height: 10vh;
+    background-color: #bababa;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .menu ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu li:hover {
+    background-color: #a8a8a8;
+  }
+  .menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Ensure links inherit color from their parent */
+  }  
